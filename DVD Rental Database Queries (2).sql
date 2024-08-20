@@ -11,8 +11,8 @@ JOIN customer c2
 ON c1.customer_id != c2.customer_id AND c1.address_id = c2.address_id
 
 --amt paid by each customer
-SELECT concat(first_name,  ' ', last_name) full_name, 
-SUM(amount) amt_paid
+SELECT concat(first_name,  ' ', last_name) 
+full_name, SUM(amount) amt_paid
 FROM customer 
 JOIN payment 
 USING (customer_id)
