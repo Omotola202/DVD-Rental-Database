@@ -63,7 +63,8 @@ FROM rental)
 
 --num of movies each actor acted
 
-SELECT CONCAT(first_name, ' ', last_name) full_name, COUNT(film_id)
+SELECT CONCAT(first_name, ' ', last_name) 
+	full_name, COUNT(film_id)
 FROM actor 
 JOIN film_actor
 USING (actor_id)
